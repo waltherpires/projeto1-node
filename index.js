@@ -2,23 +2,23 @@ const express = require("express");
 const app = express();
 
 app.get("/", function (req, res) {
-  res.send("<h1>teste 2</h1>");
+  res.send("<h1>Site de musicas</h1>");
 });
 
-app.get("/itens", function (req, res) {
-  res.send("<h1>Lista de itens!</h1>");
+app.get("/musicas", function (req, res) {
+  res.send("<h1>Lista de musicas!</h1>");
 });
 
-app.get("/consulta/:parametro", function (req, res) {
-  res.send("retorno consulta:" + req.params.parametro);
+app.get("/banda/:parametro", function (req, res) {
+  res.send("banda: " + req.params.parametro);
 });
 
-app.get("/cadastro/:nome?", function (req, res) {
-  var nome = req.params.nome;
+app.get("/adicionar/:musica?", function (req, res) {
+  var nome = req.params.musica;
   if (nome) {
-    res.send("<h1>item " + nome + " criado!</h1>");
+    res.send("<h1>musica " + nome + " adicionada!</h1>");
   } else {
-    res.send("item criado!");
+    res.send("escolha uma musica!");
   }
 });
 
