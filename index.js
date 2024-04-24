@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", function (req, res) {
-  res.send("<h1>Versao inicial</h1>");
+  res.send("<h1>Versao secundaria</h1>");
 });
 
 app.get("/musicas", function (req, res) {
